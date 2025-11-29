@@ -167,17 +167,18 @@ p {
     left: 0;
     right: 0;
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
     box-shadow: none;
     z-index: 1000;
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: var(--shadow-md);
-    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
 }
 
 .nav-content {
@@ -193,19 +194,24 @@ p {
 }
 
 .logo-image {
-    height: 80px;
-    width: auto;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
     transition: var(--transition);
-    filter: brightness(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 4px solid white;
+    background: white;
 }
 
 .logo-image:hover {
     transform: scale(1.05);
-    filter: brightness(1.1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 .navbar.scrolled .logo-image {
-    height: 50px;
+    height: 80px;
+    width: 80px;
 }
 
 .logo-placeholder {
@@ -235,12 +241,14 @@ p {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: var(--transition);
     position: relative;
     display: flex;
     align-items: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
 .navbar.scrolled .nav-menu a {
@@ -248,42 +256,43 @@ p {
     text-shadow: none;
 }
 
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(135deg, var(--primary), var(--accent-green));
-    transition: var(--transition);
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
 }
 
-.nav-menu a:hover::after {
-    width: 100%;
+.navbar.scrolled .nav-menu a:hover {
+    background: var(--bg-light);
+    color: var(--primary);
+}
+
+.nav-menu a::after {
+    display: none;
 }
 
 .instagram-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    padding: 0.65rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     color: white;
     transition: var(--transition);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .navbar.scrolled .instagram-link {
     background: linear-gradient(135deg, var(--accent-green), var(--secondary));
     border: none;
+    color: white;
 }
 
 .instagram-link:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: var(--shadow-md);
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .instagram-link::after {
@@ -305,10 +314,12 @@ p {
     background: white;
     border-radius: 3px;
     transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled .menu-toggle span {
     background: var(--primary);
+    box-shadow: none;
 }
 
 /* ===================================
