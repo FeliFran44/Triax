@@ -212,7 +212,7 @@ const createScrollToTop = () => {
         right: 30px;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        background: linear-gradient(135deg, #5C6A35, #326970);
         color: white;
         border: none;
         border-radius: 50%;
@@ -221,7 +221,7 @@ const createScrollToTop = () => {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 13, 10, 0.2);
         z-index: 999;
     `;
     
@@ -246,12 +246,12 @@ const createScrollToTop = () => {
     
     button.addEventListener('mouseenter', () => {
         button.style.transform = 'translateY(-5px)';
-        button.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+        button.style.boxShadow = '0 6px 20px rgba(92, 106, 53, 0.3)';
     });
     
     button.addEventListener('mouseleave', () => {
         button.style.transform = 'translateY(0)';
-        button.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        button.style.boxShadow = '0 4px 12px rgba(0, 13, 10, 0.2)';
     });
 };
 
@@ -266,7 +266,7 @@ const createCursorEffect = () => {
     cursor.style.cssText = `
         width: 20px;
         height: 20px;
-        border: 2px solid #3b82f6;
+        border: 2px solid #5C6A35;
         border-radius: 50%;
         position: fixed;
         pointer-events: none;
@@ -289,12 +289,12 @@ const createCursorEffect = () => {
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.style.transform = 'scale(1.5)';
-            cursor.style.borderColor = '#1e3a8a';
+            cursor.style.borderColor = '#17403C';
         });
         
         el.addEventListener('mouseleave', () => {
             cursor.style.transform = 'scale(1)';
-            cursor.style.borderColor = '#3b82f6';
+            cursor.style.borderColor = '#5C6A35';
         });
     });
 };
@@ -327,5 +327,5 @@ window.addEventListener('scroll', debounce(() => {
 // ===================================
 // CONSOLE MESSAGE
 // ===================================
-console.log('%c🚀 TRIAX Website', 'font-size: 20px; font-weight: bold; color: #1e3a8a;');
-console.log('%cGestión Integral de Propiedades y Proyectos Empresariales', 'font-size: 14px; color: #3b82f6;');
+console.log('%c🚀 TRIAX Website', 'font-size: 20px; font-weight: bold; color: #17403C;');
+console.log('%cGestión Integral de Propiedades y Proyectos Empresariales', 'font-size: 14px; color: #5C6A35;');
