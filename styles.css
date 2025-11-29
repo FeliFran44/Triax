@@ -194,24 +194,24 @@ p {
 }
 
 .logo-image {
-    height: 100px;
-    width: 100px;
+    height: 140px;
+    width: 140px;
     object-fit: cover;
     border-radius: 50%;
     transition: var(--transition);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    border: 4px solid white;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+    border: 5px solid white;
     background: white;
 }
 
 .logo-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.6);
 }
 
 .navbar.scrolled .logo-image {
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
 }
 
 .logo-placeholder {
